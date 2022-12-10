@@ -8,3 +8,8 @@ declare module 'vue' {
     const { configureCompat } = Vue
     export { configureCompat }
 }
+
+declare module '*.vue' {
+    import Vue from 'vue'
+    export default Vue
+}
