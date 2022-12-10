@@ -1,7 +1,10 @@
-// import main from '../../src/main'
+import { describe, it, expect } from "@jest/globals"
+
 // @ts-ignore
 import App from '../../src/App.vue'
 
-
-// console.log('main', main)
-console.log('App', App)
+describe("App", () => {
+    it("is an object", () => {
+        expect(typeof App).toBe("object");
+    });
+});
