@@ -2,6 +2,15 @@ import type {Config} from 'jest';
 
 export default async (): Promise<Config> => {
   return {
+    globals: {
+      'vue-jest': {
+        compilerOptions: {
+          compatConfig: {
+            MODE: 2
+          }
+        }
+      }
+    },
     verbose: true,
     moduleFileExtensions: ['js', 'ts', 'json', 'vue'],
     transform: {
