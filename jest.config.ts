@@ -1,15 +1,19 @@
 import type {Config} from 'jest';
 
+const vueJestSettings = {
+  compilerOptions: {
+    compatConfig: {
+      MODE: 2
+    }
+  }
+}
+
 export default async (): Promise<Config> => {
   return {
     globals: {
-      'vue-jest': {
-        compilerOptions: {
-          compatConfig: {
-            MODE: 2
-          }
-        }
-      }
+      'vue-jest': vueJestSettings,
+      '@vue/vue2-jest': vueJestSettings,
+      '@vue/vue3-jest': vueJestSettings
     },
     verbose: true,
     moduleFileExtensions: ['js', 'ts', 'json', 'vue'],
