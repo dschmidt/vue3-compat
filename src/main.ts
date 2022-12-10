@@ -22,3 +22,6 @@ new Vue({
   router,
   render: (h: any) => h(App)
 })
+
+
+export default { main: true }
