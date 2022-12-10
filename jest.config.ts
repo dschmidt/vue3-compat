@@ -20,6 +20,8 @@ export default async (): Promise<Config> => {
     },
     moduleNameMapper: {
       "^vue$": "@vue/compat",
-    }
+      '\\.(css|less|scss|svg)$': '<rootDir>/tests/unit/stubs/empty.js',
+    },
+    testEnvironment: 'jsdom'
   }
 }
